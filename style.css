@@ -1,0 +1,320 @@
+:root {
+  --header: #4b2c20;
+  --button: #4b2c20;
+  --newsletter: #d9b89a;
+  --footer: #000;
+  --text: #222;
+  --muted: #333;
+}
+
+/* Ogólne ustawienia */
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background: #fff;
+}
+
+/* Nagłówek */
+header { 
+  background: var(--header);
+  color: #fff;
+  text-align: center;
+  padding: 48px 16px;
+  width: 100%;
+  height: 100%;
+}
+header a{
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+header h1 {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 8px;
+  font-size: 2.4rem;
+}
+header h2 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Sekcja miejsc */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 1.8rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.image-wrap {
+  position: relative;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+}
+.card p {
+  text-align: center;
+  color: var(--muted);
+  margin: 14px 12px 0;
+}
+.card .btn {
+  display: inline-block;
+  margin: 14px auto 20px;
+  padding: 12px 28px;
+  background: var(--button);
+  color: #fff;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.card .btn:hover {
+  filter: brightness(0.9);
+}
+
+/* Newsletter */
+.newsletter {
+  background: #d9b89a;
+  padding: 36px 20px;
+  color: #111;
+  text-align: center;
+
+}
+.newsletter h3 {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+}
+.newsletter p {
+  margin-bottom: 20px;
+  padding: 10px 0px;
+
+
+}
+.newsletter input[type="text"],
+.newsletter input[type="email"]
+{
+  padding: 8px 10px 12px;
+  border: 1px  #ccc;
+  margin: 5px;
+  border-radius: 4px;
+}
+.newsletter label {
+  margin: 10px 0;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.newsletter button {
+  background: #4b2c20;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  filter: brightness(0.9);
+}
+
+/* Kontakt */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+.contact h3 {
+  margin-bottom: 20px;
+}
+.contact .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1rem;
+}
+
+/* Mapa */
+.map {
+  text-align: center;
+  padding: 40px 20px;
+}
+.map h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.map iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+}
+
+/* Opinie */
+.opinions {
+  background: url("./img/overlook-4841320_1280.jpg") center/cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: 60% 0;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+.opinions h3 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+ 
+}
+
+.opinions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.opinion {
+  background: rgba(255, 255, 255, 0.85);
+  color: #111;
+  max-width: 320px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.opinion:hover {
+  transform: translateY(-15px);
+}
+.opinion p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.opinion h4 {
+  font-weight: 700;
+  color: #222;
+}
+
+/* Stopka */
+footer {
+  background: var(--footer);
+  color: #fff;
+  text-align: center;
+  padding: 22px 16px;
+}
+footer .social img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  margin: 8px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+footer .social img:hover {
+  transform: scale(1.15);
+  filter: brightness(1) invert(0);
+}
+footer p {
+  margin: 10px 0;
+}
+header {
+  background: var(--header);
+  color: #fff;
+  text-align: center;
+
+  /* kluczowe */
+  height: 100vh;               
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;       
+
+  padding: 0 20px;
+  margin: 0;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 3rem;
+}
+
+header h2 {
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+header a {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+header {
+  background: 
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+    url("./img/sagrada-familia-552084_1280.jpg") center/cover no-repeat;
+
+  color: #fff;
+  text-align: center;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 20px;
+  margin: 0;
+}
+
